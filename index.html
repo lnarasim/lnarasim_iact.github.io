@@ -32,6 +32,27 @@
 
     <!-- Custom styles for this template -->
     <link href="css/creative.min.css" rel="stylesheet">
+	
+	<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script>
+	Modernizr.load({
+	    test: Modernizr.borderradius && Modernizr.boxshadow,
+	    nope: "//cdnjs.cloudflare.com/ajax/libs/css3pie/1.0.0/PIE.js",
+	    complete: function(){
+	        if(window.PIE){
+	            $('*').each(function(){
+	                var $this = $(this);
+	                //check if box-shadow or border-radius is applied
+	                if($this.css('box-shadow') || $this.css('border-radius')){
+	                    PIE.attach(this);
+	                }
+	            });
+	        }
+	    }
+	 });
+	</script>
+<link rel="stylesheet" href="css/process.css">
 
   </head>
 
@@ -103,27 +124,27 @@
 			<h4>Institute of Advanced Computing and Technology is premier Technology School with inherent ethos to enhance the knowledge co-efficient of the students.</h4>
 			<h4>This institute is founded by Technology Gurus having decades of experience and comprehension about IT landscape.</h4>
 			<h4>Our flagship programs are delivered in classroom model for 11 months with employment kick-starting from the third month of the program</h4>
+			<br/>
+			<h2 class="section-heading text-white">Inducting to i-ACT Program - Process Flow</h2>
+			<hr class="light my-4">
 			</h6>
 			</p>
-			<div>
-				<div class="step">
-					<img src=""></img>
-					<h5>Step 1 - Apply</h5>
-				</div>
-				<div class="step">
-					<img src=""></img>
-					<h5>Step 2 - Tap Tests and Personal Interview</h5>
-				</div>
-				<div class="step">
-					<img src=""></img>
-					<h5>Step 3 - Admission Letter Roll-out</h5>
-				</div>
-				<div class="step">
-					<img src=""></img>
-					<h5>Step 4 - On-boarding For The Program With The Offer Letter</h5>
-				</div>
+			<!-- a simple div with some links
+			<div class="process">
+				<a href="#" class="active">Set Dates / Locations / Forms</a>
+				<a href="#">Verify Roster</a>
+				<a href="#">Match Students / Faculty</a>
+				<a href="#">Review</a>
+			</div> -->
+			<br />
+			<!-- another version - flat style with animated hover effect -->
+			<div class="process flat">
+				<a href="#" class="active">Apply</a>
+				<a href="#" class="active">Tests and Interview</a>
+				<a href="#" class="active">Admission</a>
+				<a href="#" class="active">On-boarding with Offer Letter</a>
 			</div>
-			<br/>
+			<br/><br/>
             <a class="btn btn-light btn-xl js-scroll-trigger" href="#programs">Check Out Our Flagship Programs!</a>
 			</div>
           </div>
